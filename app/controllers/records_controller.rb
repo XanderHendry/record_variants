@@ -1,6 +1,6 @@
 class RecordsController < ApplicationController
   def index
-    @records = Record.all
+    @records = Record.all.order_by_most_recent
   end
 
   def show

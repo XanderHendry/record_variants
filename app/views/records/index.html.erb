@@ -3,4 +3,5 @@
 <% @records.each do |record| %>
   <h3><a href="/records/<%= record.id %>"><%= record.album %></a></h3>
   <p>Artist: <%= record.artist %></p>
+  <p>Added: <%= record.created_at %></p>
 <% end %>
