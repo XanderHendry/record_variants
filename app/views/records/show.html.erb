@@ -1,0 +1,10 @@
+<a href="records">Records Index</a>
+
+<h1><%= @record.album %></h1>
+<p>Artist: <%= @record.artist %></p>
+<p>Play Speed: <%= @record.play_speed %>rpm</p>
+<% if @record.double_lp? %>
+  <p>Format: 2xVinyl LP</p>
+<% else %>
+  <p>Format: Vinyl LP</p>
+<% end %>

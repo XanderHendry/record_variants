@@ -223,15 +223,88 @@
           null,
           null,
           1,
-          null,
-          null,
-          null,
+          1,
+          1,
+          1,
           null
         ]
       },
       "/Users/xander/turing/2mod/projects/relational_rails/record_variants/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/xander/turing/2mod/projects/relational_rails/record_variants/spec/features/records/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/xander/turing/2mod/projects/relational_rails/record_variants/spec/features/variants/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -266,7 +339,10 @@
       "/Users/xander/turing/2mod/projects/relational_rails/record_variants/app/models/record.rb": {
         "lines": [
           1,
+          1,
           null,
+          1,
+          2,
           null,
           null
         ]
@@ -278,11 +354,34 @@
           null
         ]
       },
-      "/Users/xander/turing/2mod/projects/relational_rails/record_variants/app/controllers/welcome_controller.rb": {
+      "/Users/xander/turing/2mod/projects/relational_rails/record_variants/spec/models/variant_spec.rb": {
         "lines": [
+          1,
+          null,
+          1,
+          1,
           1,
           1,
           null,
+          null
+        ]
+      },
+      "/Users/xander/turing/2mod/projects/relational_rails/record_variants/app/models/variant.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/xander/turing/2mod/projects/relational_rails/record_variants/app/controllers/records_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
           null,
           null
         ]
@@ -292,8 +391,28 @@
           1,
           null
         ]
+      },
+      "/Users/xander/turing/2mod/projects/relational_rails/record_variants/app/controllers/variants_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/xander/turing/2mod/projects/relational_rails/record_variants/app/controllers/welcome_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1697121480
+    "timestamp": 1697309392
   }
 }

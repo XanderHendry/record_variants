@@ -1,0 +1,12 @@
+<h1>Variants Index</h1>
+
+<% @records.each do |record| %>
+  <h3><%= record.album %></h3>
+  <% @variants.each do |variant| %>
+    <% if variant.record_id == record.id %>
+      <p>Color: <%= variant.color %></p>
+      <p>Copies: <%= variant.copies %></p>
+      <p>Serialized: <%= variant.serialized %></p>
+    <% end %>
+  <% end %>
+<% end %>
