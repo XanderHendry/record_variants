@@ -4,4 +4,8 @@ class VariantsController < ApplicationController
    @variants = Variant.all
   #  binding.pry
  end
+
+ def show
+  @variant = Variant.find(params[:id])
+ end
 end

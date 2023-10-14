@@ -1,0 +1,9 @@
+<h1><%= @record.album %> Variants</h1>
+
+<% @variants.each do |variant| %>
+  <p>Color: <%= variant.color %></p>
+  <p>Copies: <%= variant.copies %></p>
+  <% if variant.serialized == true %>
+    <p>Serialized</p>
+  <% end %>
+<% end %>

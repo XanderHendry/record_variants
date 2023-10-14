@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get "/records", to: "records#index"
   get "/records/:id", to: "records#show"
   get "/variants", to: "variants#index"
+  get "/variant/:id", to: "variants#show"
+  get "/records/:record_id/variants", to: "record_variants#index"
 end
