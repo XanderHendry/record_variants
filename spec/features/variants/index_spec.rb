@@ -37,6 +37,14 @@ RSpec.describe "Variants Index", type: :feature do
 
         expect(current_path).to eq("/variant/#{@variant1.id}")
       end
+
+      it 'has a link to the Records index' do 
+        visit "/variants"
+        
+        click_on("Records Index")
+
+        expect(current_path).to eq("/records")
+      end
     end
   end
 end 

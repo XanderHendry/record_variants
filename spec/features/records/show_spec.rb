@@ -15,7 +15,6 @@ RSpec.describe "Records Show", type: :feature do
         
         visit "records/#{@record.id}"
 
-        save_and_open_page
         expect(page).to have_content(@record.album)
         expect(page).to have_content("Artist: #{@record.artist}")
         expect(page).to have_content("Play Speed: #{@record.play_speed}rpm")
@@ -25,6 +24,21 @@ RSpec.describe "Records Show", type: :feature do
       it 'a count of the number of Variants associated with this Record' do 
         visit "records/#{@record.id}"
         expect(page).to have_content("Variants: #{@record.count_variants}")
+      end
+
+      it 'has a link to the Variants index' do 
+        visit "records/#{@record.id}"
+        
+        click_on("Variants Index")
+
+        expect(current_path).to eq("/variants")
+      end
+      it 'has a link to the Records index' do 
+        visit "records/#{@record.id}"
+        
+        click_on("Records Index")
+
+        expect(current_path).to eq("/records")
       end
     end
   end

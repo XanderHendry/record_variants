@@ -22,6 +22,20 @@ RSpec.describe "Record Variants Index", type: :feature do
         expect(page).to have_content("Color: #{@variant2.color}")
         expect(page).to have_content("Copies: #{@variant2.copies}")
       end
+      it 'has a link to the Variants index' do 
+        visit "/records/#{@record.id}/variants"
+        
+        click_on("Variants Index")
+
+        expect(current_path).to eq("/variants")
+      end
+      it 'has a link to the Records index' do 
+        visit "/records/#{@record.id}/variants"
+        
+        click_on("Records Index")
+
+        expect(current_path).to eq("/records")
+      end
     end
   end
 end 

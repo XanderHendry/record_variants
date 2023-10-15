@@ -7,6 +7,6 @@ RSpec.describe 'welcome page' do
   expect(page).to have_content("Vinyl Records and Variant Pressings")
 
   expect(page).to have_content("Records Index")
-  expect(page).to have_content("Add Record")
+  expect(page).to have_content("Variants Index")
   end
 end 

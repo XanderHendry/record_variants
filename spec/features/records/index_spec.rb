@@ -37,6 +37,14 @@ RSpec.describe "Records Index", type: :feature do
         expect(page).to have_content("Added: #{@record2.created_at}")
         expect(page).to have_content("Added: #{@record1.created_at}")
       end
+
+      it 'has a link to the Variants index' do 
+        visit "/records"
+        
+        click_on("Variants Index")
+
+        expect(current_path).to eq("/variants")
+      end
     end
   end
 end 
