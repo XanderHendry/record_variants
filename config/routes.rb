@@ -3,10 +3,19 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  
+  # Weclome page route
   get "/", to: "welcome#index"
+
+  # Records routes
   get "/records", to: "records#index"
+  get "/records/new", to: "records#new"
+  post "/records", to: "records#create"
   get "/records/:id", to: "records#show"
+  # Variants routes
   get "/variants", to: "variants#index"
   get "/variant/:id", to: "variants#show"
+
+  # Record Variant routes
   get "/records/:record_id/variants", to: "record_variants#index"
 end

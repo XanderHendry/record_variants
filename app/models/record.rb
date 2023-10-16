@@ -10,6 +10,6 @@ class Record < ApplicationRecord
  end
 
  def count_variants
-  self.variants.count
+  variants.count
  end
 end
