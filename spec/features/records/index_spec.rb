@@ -65,7 +65,7 @@ RSpec.describe "Records Index", type: :feature do
         expect(current_path).to eq("/records")
 
         visit "/records"
-        save_and_open_page
+
         expect(page).to have_content('Infinite Granite')
       end
     end

@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get "/records/new", to: "records#new"
   post "/records", to: "records#create"
   get "/records/:id", to: "records#show"
+  get "/records/:id/edit", to: "records#edit"
+  patch "/records/:id", to: "records#update"
   # Variants routes
   get "/variants", to: "variants#index"
   get "/variant/:id", to: "variants#show"

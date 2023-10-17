@@ -8,4 +8,5 @@
 <% else %>
   <p>Format: Vinyl LP</p>
 <% end %>
+<%= button_to "Edit #{@record.album}", "/records/#{@record.id}/edit", method: :get %>
 <p>Variants: <%= @record.count_variants %></p>

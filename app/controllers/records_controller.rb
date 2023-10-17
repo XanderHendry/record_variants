@@ -21,6 +21,18 @@ class RecordsController < ApplicationController
     redirect_to "/records"
   end
 
+  def edit
+    
+    @record = Record.find(params[:id])
+  end
+
+  def update
+    record = Record.find(params[:id])
+    record.update(record_params)
+
+    redirect_to "/records/#{record.id}"
+  end
+
   private
 
   def record_params

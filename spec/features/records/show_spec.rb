@@ -41,6 +41,28 @@ RSpec.describe "Records Show", type: :feature do
         expect(current_path).to eq("/records")
       end
     end
+    describe "updating an existing Record" do 
+      describe "Record update form" do 
+        it "I can click a button next to a record and will be taken to an update for " do 
+          visit "records/#{@record.id}"
+          click_button("Edit #{@record.album}")
+
+          expect(current_path).to eq("/records/#{@record.id}/edit")
+        end
+
+        it "I can fill in and submit the form, be redirected to the record/show page and see my updated Record" do 
+          record = Record.create(album: "Onleting Go", artist: "Circa Survive", play_speed: 45, double_lp: false)
+          visit "/records/#{record.id}/edit"
+          
+          fill_in "Album", with: "On Letting Go"
+          select "33"
+          click_button "Update"
+          expect(current_path).to eq("/records/#{record.id}")
+          expect(page).to have_content("On Letting Go")
+          expect(page).to have_content("33")
+        end
+      end
+    end
   end
 end 
 
