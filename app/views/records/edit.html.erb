@@ -1,3 +1,6 @@
+<%= button_to "Records Index", "/records", method: :get %>
+<%= button_to "Variants Index", "/variants", method: :get %>
+
 <h3>Edit <%= @record.album %></h3>
 
 <%= form_with url: "/records/#{@record.id}", method: :patch, data: {turbo:false} do |f| %>

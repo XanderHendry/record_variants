@@ -1,5 +1,6 @@
-<a href="/records">Records Index</a>
-<a href="/variants">Variants Index</a>
+
+<%= button_to "Records Index", "/records", method: :get %>
+<%= button_to "Variants Index", "/variants", method: :get %>
 <h1><%= @record.album %></h1>
 <p>Artist: <%= @record.artist %></p>
 <p>Play Speed: <%= @record.play_speed %>rpm</p>

@@ -1,7 +1,9 @@
-<a href="/variants">Variants Index</a>
+
+<%= button_to "Variants Index", "/variants", method: :get %>
 
 <h1>Records</h1>
-<a href="/records/new">New Record</a>
+
+<%= button_to "New Record", "/records/new", method: :get %>
 
 <% @records.each do |record| %>
   <h3><a href="/records/<%= record.id %>"><%= record.album %></a></h3>
