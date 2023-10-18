@@ -26,6 +26,12 @@ RSpec.describe "Records Show", type: :feature do
         expect(page).to have_content("Variants: #{@record.count_variants}")
       end
 
+      it 'has a link to a Records Variants' do
+        visit "records/#{@record.id}"
+        click_on "Record Variants"
+        expect(current_path).to eq("/records/#{@record.id}/variants")
+      end
+
       it 'has a link to the Variants index' do 
         visit "records/#{@record.id}"
         

@@ -20,4 +20,6 @@ Rails.application.routes.draw do
 
   # Record Variant routes
   get "/records/:record_id/variants", to: "record_variants#index"
+  get "/records/:record_id/variants/new", to: "record_variants#new"
+  post "/records/:record_id/variants", to: "record_variants#create"
 end

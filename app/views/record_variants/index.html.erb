@@ -8,5 +8,6 @@
   <p>Copies: <%= variant.copies %></p>
   <% if variant.serialized == true %>
     <p>Serialized</p>
-  <% end %>
-<% end %>
+  <% end %> 
+<% end %> 
+<%= button_to "Create Variant", "/records/#{@record.id}/variants/new", method: :get %>
