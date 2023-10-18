@@ -5,3 +5,4 @@
 <p>Color: <%= @variant.color %></p>
 <p>Copies: <%= @variant.copies %></p>
 <p>Serialized: <%= @variant.serialized %></p>
+<%= button_to "Update Variant", "/variant/#{@variant.id}/edit", method: :get %>

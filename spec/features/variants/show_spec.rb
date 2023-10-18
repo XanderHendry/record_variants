@@ -30,6 +30,24 @@ RSpec.describe "Records Show", type: :feature do
 
         expect(current_path).to eq("/records")
       end
+      it "has a link to update that Variant 'Update Variant'" do 
+        visit "variant/#{@variant.id}"
+        
+        click_on("Update Variant")
+
+        expect(current_path).to eq("/variant/#{@variant.id}/edit")
+      end
+      it "has a form to edit the variants's attributes, when I click submit I'll be directed back to the variant show page" do 
+        visit "variant/#{@variant.id}/edit"
+        save_and_open_page
+        fill_in "Color", with: "Blue-White-Green Twister"
+        click_on "Update"
+        expect(current_path).to eq("/variant/#{@variant.id}")
+        expect(page).to have_content("Blue-White-Green Twister")
+        expect(page).to have_content("Copies: #{@variant.copies}")
+        expect(page).to have_content("Serialized: #{@variant.serialized}")
+      end
     end
   end
 end 
+

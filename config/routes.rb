@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   # Variants routes
   get "/variants", to: "variants#index"
   get "/variant/:id", to: "variants#show"
+  get "/variant/:id/edit", to: "variants#edit"
+  patch "/variant/:id", to: "variants#update"
+
 
   # Record Variant routes
   get "/records/:record_id/variants", to: "record_variants#index"
