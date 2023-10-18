@@ -1,7 +1,8 @@
-<a href="/records">Records Index</a>
-<a href="/variants">Variants Index</a>
+<%= button_to "Records Index", "/records", method: :get %>
+<%= button_to "Variants Index", "/variants", method: :get %>
 
 <h1><%= @variant.record.album %></h1>
 <p>Color: <%= @variant.color %></p>
 <p>Copies: <%= @variant.copies %></p>
 <p>Serialized: <%= @variant.serialized %></p>
+<%= button_to "Update Variant", "/variant/#{@variant.id}/edit", method: :get %>

@@ -1,5 +1,5 @@
-<a href="/variants">Variants Index</a>
-<a href="/records">Records Index</a>
+<%= button_to "Records Index", "/records", method: :get %>
+<%= button_to "Variants Index", "/variants", method: :get %>
 
 <h1><%= @record.album %> Variants</h1>
 
@@ -8,5 +8,6 @@
   <p>Copies: <%= variant.copies %></p>
   <% if variant.serialized == true %>
     <p>Serialized</p>
-  <% end %>
-<% end %>
+  <% end %> 
+<% end %> 
+<%= button_to "Create Variant", "/records/#{@record.id}/variants/new", method: :get %>

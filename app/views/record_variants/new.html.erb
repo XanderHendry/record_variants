@@ -1,0 +1,15 @@
+<%= button_to "Records Index", "/records", method: :get %>
+<%= button_to "Variants Index", "/variants", method: :get %>
+
+<h3>Add a new Record</h3>
+
+<%= form_with url: "/records/#{@record.id}/variants", method: :post, data: {turbo:false} do |f| %>
+<%= f.label :color %>
+<%= f.text_field :color %><br>
+<%= f.label :copies %>
+<%= f.text_field :copies %><br>
+<%= f.label "Serialized" %>
+<%= f.select :serialized, [true, false] %><br>
+
+<%= f.submit "Create Variant" %>
+<% end %>

@@ -37,5 +37,22 @@ RSpec.describe "Record Variants Index", type: :feature do
         expect(current_path).to eq("/records")
       end
     end
+    describe "Adding a new Record Variant" do 
+      it "I see a link to add a new Variant for that Record" do 
+        visit "/records/#{@record.id}/variants"
+        click_on("Create Variant")
+        expect(current_path).to eq("/records/#{@record.id}/variants/new")
+      end
+
+      it 'I can fill in a form with Variant attributes to create a new Record Variant' do
+        visit "/records/#{@record.id}/variants/new"
+        fill_in "Color", with: "Handmade OG Splatter and Nebula"
+        fill_in "Copies", with: "100"
+        select "false"
+        click_button "Create Variant"
+        expect(current_path).to eq("/records/#{@record.id}/variants")
+        expect(page).to have_content("Handmade OG Splatter and Nebula")
+      end
+    end
   end
 end 
